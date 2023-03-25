@@ -1,0 +1,1 @@
+D:\wissa\Documents\Framework\NETMAUI\FilmFinder\FilmFinder.csproj;x64

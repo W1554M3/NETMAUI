@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FilmFinder</name>
+    </assembly>
+    <members>
+        <member name="P:FilmFinder.ViewModel.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:FilmFinder.ViewModel.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:FilmFinder.ViewModel.BaseViewModel.Title">
+            <inheritdoc cref="F:FilmFinder.ViewModel.BaseViewModel.title"/>
+        </member>
+        <member name="P:FilmFinder.ViewModel.FilmsDetailsViewModel.Film">
+            <inheritdoc cref="F:FilmFinder.ViewModel.FilmsDetailsViewModel.film"/>
+        </member>
+        <member name="F:FilmFinder.ViewModel.FilmsDetailsViewModel.openMapCommand">
+            <summary>The backing field for <see cref="P:FilmFinder.ViewModel.FilmsDetailsViewModel.OpenMapCommand"/>.</summary>
+        </member>
+        <member name="P:FilmFinder.ViewModel.FilmsDetailsViewModel.OpenMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FilmFinder.ViewModel.FilmsDetailsViewModel.OpenMap"/>.</summary>
+        </member>
+        <member name="P:FilmFinder.ViewModel.FilmsViewModel.IsRefreshing">
+            <inheritdoc cref="F:FilmFinder.ViewModel.FilmsViewModel.isRefreshing"/>
+        </member>
+        <member name="F:FilmFinder.ViewModel.FilmsViewModel.goToDetailsCommand">
+            <summary>The backing field for <see cref="P:FilmFinder.ViewModel.FilmsViewModel.GoToDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:FilmFinder.ViewModel.FilmsViewModel.GoToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:FilmFinder.ViewModel.FilmsViewModel.GoToDetails(FilmFinder.Model.Film)"/>.</summary>
+        </member>
+        <member name="F:FilmFinder.ViewModel.FilmsViewModel.getFilmsCommand">
+            <summary>The backing field for <see cref="P:FilmFinder.ViewModel.FilmsViewModel.GetFilmsCommand"/>.</summary>
+        </member>
+        <member name="P:FilmFinder.ViewModel.FilmsViewModel.GetFilmsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FilmFinder.ViewModel.FilmsViewModel.GetFilmsAsync"/>.</summary>
+        </member>
+        <member name="F:FilmFinder.ViewModel.FilmsViewModel.getClosestFilmsCommand">
+            <summary>The backing field for <see cref="P:FilmFinder.ViewModel.FilmsViewModel.GetClosestFilmsCommand"/>.</summary>
+        </member>
+        <member name="P:FilmFinder.ViewModel.FilmsViewModel.GetClosestFilmsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FilmFinder.ViewModel.FilmsViewModel.GetClosestFilms"/>.</summary>
+        </member>
+    </members>
+</doc>

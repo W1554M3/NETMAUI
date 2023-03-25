@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FilmFinder.View.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:FilmFinder.Model"
+    xmlns:viewmodel="clr-namespace:FilmFinder.ViewModel"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    ios:Page.UseSafeArea="True"
+    Title="Films"
+    x:DataType="viewmodel:FilmsViewModel">
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="5"
+        RowDefinitions="*,Auto"
+        RowSpacing="0"
+        BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+        <RefreshView
+            Grid.ColumnSpan="2"
+            Command="{Binding GetFilmsCommand}"
+            IsRefreshing="{Binding IsRefreshing}">
+            <ContentView>
+                <CollectionView
+                        ItemsSource="{Binding Films}"
+                        SelectionMode="None">
+                    <CollectionView.EmptyView>
+                        <StackLayout Padding="100">
+                            <Image
+                                    HorizontalOptions="Center"
+                                    HeightRequest="160"
+                                    WidthRequest="160"
+                                    Source="clap.png"
+                                    VerticalOptions="Center" />
+                        </StackLayout>
+                    </CollectionView.EmptyView>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Film">
+                            <Grid Padding="10" HorizontalOptions="Fill">
+                                <Frame HeightRequest="125" Style="{StaticResource CardView}">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:FilmsViewModel}}, Path=GoToDetailsCommand}"
+                                                CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Grid Padding="0" ColumnDefinitions="125,*">
+                                        <Image
+                                                Aspect="AspectFill"
+                                                HeightRequest="125"
+                                                Source="{Binding Image}"
+                                                WidthRequest="125" />
+                                        <VerticalStackLayout
+                                                VerticalOptions="Center"
+                                                Grid.Column="1"
+                                                Padding="10">
+                                            <Label Style="{StaticResource LargeLabel}" Text="{Binding Title}" />
+                                            <Label Style="{StaticResource MediumLabel}" Text="{Binding Country}" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ContentView>
+        </RefreshView>
+
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="8"
+            Command="{Binding GetFilmsCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource ButtonOutline}"
+            Text="Get Films" />
+
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="8"
+            Command="{Binding GetClosestFilmsCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource ButtonOutline}"
+            Text="Find Closest" />
+
+
+        <ActivityIndicator
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Fill"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            Color="{StaticResource Primary}"
+            VerticalOptions="Center" />
+    </Grid>
+</ContentPage>

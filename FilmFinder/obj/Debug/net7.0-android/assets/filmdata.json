@@ -1,0 +1,74 @@
+[
+  {
+    "title": "The Shawshank Redemption",
+    "poster": "https://www.movieposter.com/posters/archive/main/42/MPW-21014",
+    "year": 1994,
+    "genre": "Drama",
+    "country": "United States",
+    "longitude": -84.0167,
+    "latitude": 41.6668
+  },
+  {
+    "title": "The Godfather",
+    "poster": "https://www.movieposter.com/posters/archive/main/24/A70-12351",
+    "year": 1972,
+    "genre": "Crime, Drama",
+    "country": "United States",
+    "longitude": -73.9866,
+    "latitude": 40.7306
+  },
+  {
+    "title": "The Dark Knight",
+    "poster": "https://www.movieposter.com/posters/archive/main/69/MPW-34765",
+    "year": 2008,
+    "genre": "Action, Crime, Drama",
+    "country": "United States, United Kingdom",
+    "longitude": -74.0060,
+    "latitude": 40.7128
+  },
+  {
+    "title": "The Godfather: Part II",
+    "poster": "https://www.movieposter.com/posters/archive/main/29/F70-19185",
+    "year": 1974,
+    "genre": "Crime, Drama",
+    "country": "United States",
+    "longitude": -118.2428,
+    "latitude": 34.0522
+  },
+  {
+    "title": "12 Angry Men",
+    "poster": "https://www.movieposter.com/posters/archive/main/48/MPW-24244",
+    "year": 1957,
+    "genre": "Drama",
+    "country": "United States",
+    "longitude": -73.9352,
+    "latitude": 40.7306
+  },
+  {
+    "title": "Schindler's List",
+    "poster": "https://www.movieposter.com/posters/archive/main/19/MPW-9924",
+    "year": 1993,
+    "genre": "Biography, Drama, History",
+    "country": "United States",
+    "longitude": -74.0059,
+    "latitude": 40.7128
+  },
+  {
+    "title": "The Lord of the Rings: The Return of the King",
+    "poster": "https://www.movieposter.com/posters/archive/main/79/MPW-39914",
+    "year": 2003,
+    "genre": "Action, Adventure, Drama",
+    "country": "United States, New Zealand",
+    "longitude": 174.7633,
+    "latitude": -41.2865
+  },
+  {
+    "title": "Pulp Fiction",
+    "poster": "https://www.movieposter.com/posters/archive/main/13/A70-6923",
+    "year": 1994,
+    "genre": "Crime, Drama",
+    "country": "United States",
+    "longitude": -118.2437,
+    "latitude": 34.0522
+  }
+]
